@@ -1,0 +1,197 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Graph Toy</title>
+    <link rel="shortcut icon" href="img/logo_miccall.png">
+
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <script src="graphtoy.js"></script>
+    <script>
+    var grapher = null;
+
+    function myInit() { grapher = new Grapher(); }
+    </script>
+
+</head>
+
+<body onload="myInit();">
+    <!-- --------------------------------------------------------------------------------- -->
+    <h1>Graph Toy </h1><h5></h5>
+    <br>
+    
+
+    <table border="0">
+        <tbody>
+            <tr>
+                <td valign="top" align="left">
+                    <table class="guiWindow">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td width="200px" id="myCoords">(7.83, 1.37)</td>
+                                                <td width="16px"></td>
+                                                <td>
+                                                    <input type="button" class="userInputButtons" value="axis" onclick="grapher.toggleShowAxes();">
+                                                </td>
+                                                <td width="16px"></td>
+                                                <td>
+                                                    <input type="button" class="userInputButtons" value="guides" onclick="grapher.toggleShowGuides()">
+                                                </td>
+                                                <td width="16px"></td>
+                                                <td>Range:
+                                                    <select class="userInput" id="myPresets" onchange="grapher.setRange( this.options[this.selectedIndex].value );">
+                                                        <option value="2" selected="">Free</option>
+                                                        <option value="0">0..1</option>
+                                                        <option value="1">-1..1</option>
+                                                    </select>
+                                                </td>
+                                                <td width="16px"></td>
+                                                <td>Size:
+                                                    <select class="userInput" id="mySize" onchange="grapher.setSize( this.options[this.selectedIndex].value );">
+                                                        <option value="0" selected="">Small</option>
+                                                        <option value="1">Medium</option>
+                                                        <option value="2">Big</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <canvas id="mainCanvas" width="720" height="540">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br><b>
+        Sorry, GraphToy cannot start...
+        </b>
+                                        <br>
+                                        <br> You need a modern browser to run GraphToy
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </canvas>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td valign="top" width="24px"></td>
+                <td align="left" valign="top">
+                    <table class="guiWindow" width="100%">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <label>
+                                                        <input type="checkbox" id="draw1" checked="" onchange="grapher.draw(1);">
+                                                        <font color="#ffc040">f1(x)</font>
+                                                    </label>
+                                                    <input type="text" class="userInput" size="90" name="formula1" id="formula1" value="sin(4*x)/x" onchange="grapher.draw(1);">
+                                                    <br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>
+                                                        <input type="checkbox" id="draw2" checked="" onchange="grapher.draw(2);">
+                                                        <font color="#ffffa0">f2(x)</font>
+                                                    </label>
+                                                    <input type="text" class="userInput" size="90" name="formula2" id="formula2" value="floor(x)" onchange="grapher.draw(2);">
+                                                    <br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>
+                                                        <input type="checkbox" id="draw3" checked="" onchange="grapher.draw(3);">
+                                                        <font color="#a0ffc0">f3(x)</font>
+                                                    </label>
+                                                    <input type="text" class="userInput" size="90" name="formula3" id="formula3" value="noise(x)*x" onchange="grapher.draw(3);">
+                                                    <br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>
+                                                        <input type="checkbox" id="draw4" checked="" onchange="grapher.draw(4);">
+                                                        <font color="#40c0ff">f4(x)</font>
+                                                    </label>
+                                                    <input type="text" class="userInput" size="90" name="formula4" id="formula4" value="sqrt(1-x*x)" onchange="grapher.draw(4);">
+                                                    <br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>
+                                                        <input type="checkbox" id="draw5" onchange="grapher.draw(5);">
+                                                        <font color="#d0a0ff">f5(x)</font>
+                                                    </label>
+                                                    <input type="text" class="userInput" size="90" name="formula5" id="formula5" value="log(x)" onchange="grapher.draw(5);">
+                                                    <br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>
+                                                        <input type="checkbox" id="draw6" onchange="grapher.draw(6);">
+                                                        <font color="#ff80c0">f6(x)</font>
+                                                    </label>
+                                                    <input type="text" class="userInput" size="90" name="formula6" id="formula6" value="-x+sin(x)" onchange="grapher.draw(6);">
+                                                    <br>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <br>
+                    <span style="font-size:0.85em">
+    
+    Formulas:
+    <ul>
+     <li>+, -,  *, /, %, ()</li>
+     <li>cos(x), sin(x), tan(x), acos(x), asin(x), atan(x), atan2(x,y)</li>
+     <li>sqrt(x), inversesqrt(x), exp(x), pow(x,y), log(x)</li>
+     <li>ceil(x), floor(x), round(x), frac(x)</li>
+     <li>abs(x), sign(x), max(x,y), min(x,y), clamp(x,a,b), step(a,x), smoothstep(a,b,x)</li>
+     <li>mix(a,b,x), over(x,y)</li>
+     <li>tri(a,x), sqr(a,x), noise(x), cellnoise(x), random()</li>
+     <li>radians(degrees), degrees(radians)</li>
+     <li>PI, E, LN10, LN2, LOG10E, LOG2E, SQRT2, SQRT1_2</li>
+    </ul>
+    <br>
+    Composition:
+    <ul>
+     <li>f3(x) : noise(x)*f1(x)</li>
+     <li>f3(x) : noise(f1(f2(x)+x))<br>
+    </li></ul>
+    <br>
+    Application:
+    <ul>
+     <li>Pan the graphs with the Left Mouse Button (in Free mode)</li>
+     <li>Zoom into the graphs with Shif + Left Mouse Button (in Free mode)</li>
+    </ul>
+    </span>
+</body>
+
+</html>

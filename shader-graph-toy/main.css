@@ -1,0 +1,305 @@
+body {
+        color: #ffffff;
+        font-family: verdana, tahoma;
+        font-size: 14px;
+        background-color: #202020;
+        margin: 0px;
+        border: 0px;
+        padding: 24px;
+    }
+
+    h1 {
+        display: inline;
+    }
+
+    TABLE.guiWindow {
+        background-color: #404040;
+        border: 0;
+    }
+
+    TD {
+        padding: 0;
+        border: 0
+    }
+
+    A {
+        text-decoration: none;
+        color: #ffb010;
+    }
+
+    A:HOVER {
+        color: #ffff00;
+    }
+
+    .userInput {
+        font-size: 14px;
+        padding: 4px;
+        background: #202020;
+        background-color: #202020;
+        color: #ffffff;
+        border: 0px solid;
+        border-color: #808080 #808080 #808080 #808080;
+    }
+
+    .userInputButtons {
+        background: #505050;
+        border: 1px solid;
+        border-color: #808080;
+        color: #ffffff;
+        font-size: 14px;
+    }
+
+    .userInputCheckbox {
+        color: #ffc040;
+        border-color: #808080;
+        background: #505050;
+        border: 1px solid;
+    }
+
+    notify-gp {
+                font: 300 14px -apple-system, PingFang SC, Microsoft Yahei, Lantinghei SC, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+                text-rendering: optimizelegibility;
+                -webkit-text-size-adjust: 100%;
+                -webkit-font-smoothing: antialiased;
+                display: -webkit-flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-flow: column nowrap;
+                flex-flow: column;
+                -webkit-box-align: end;
+                -ms-flex-align: end;
+                align-items: flex-end;
+                position: fixed;
+                top: 0;
+                right: 0;
+                margin: 0 15px 0 0;
+                padding: 0;
+                text-transform: none;
+                pointer-events: none
+            }
+
+            notify-gp notify {
+                display: -webkit-flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                margin: 0;
+                margin-top: 15px;
+                padding: 14px 24px;
+                min-width: 288px;
+                max-width: 568px;
+                height: 48px;
+                max-height: 48px;
+                color: hsla(0, 0%, 100%, .7);
+                background-color: #323232;
+                box-sizing: border-box;
+                border-radius: 4px;
+                pointer-events: auto;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                opacity: 0;
+                -webkit-transform: scaleY(0);
+                transform: scaleY(0);
+                -webkit-transform-origin: left top 0;
+                transform-origin: left top 0;
+                -webkit-transition: opacity 1s cubic-bezier(.23, 1, .32, 1) 0ms, -webkit-transform .45s cubic-bezier(.23, 1, .32, 1) 0ms;
+                transition: opacity 1s cubic-bezier(.23, 1, .32, 1) 0ms, -webkit-transform .45s cubic-bezier(.23, 1, .32, 1) 0ms;
+                transition: transform .45s cubic-bezier(.23, 1, .32, 1) 0ms, opacity 1s cubic-bezier(.23, 1, .32, 1) 0ms;
+                transition: transform .45s cubic-bezier(.23, 1, .32, 1) 0ms, opacity 1s cubic-bezier(.23, 1, .32, 1) 0ms, -webkit-transform .45s cubic-bezier(.23, 1, .32, 1) 0ms;
+                box-shadow: 0 1px 3px 0 rgba(60, 64, 67, .302), 0 4px 8px 3px rgba(60, 64, 67, .149)
+            }
+
+            notify-gp notify-title {
+                font-size: 13px;
+                font-weight: 700
+            }
+
+            notify-gp notify-content {
+                display: block;
+                font-size: 14px;
+                text-align: left;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap
+            }
+
+            notify-gp notify-content a,
+            notify-gp notify-content a:active,
+            notify-gp notify-content a:link,
+            notify-gp notify-content a:visited {
+                margin: inherit;
+                padding-bottom: 5px;
+                color: #fff;
+                font-size: inherit;
+                text-decoration: none;
+                -webkit-transition: color .5s;
+                transition: color .5s
+            }
+
+            notify-gp notify-content a:hover {
+                margin: 0;
+                margin: initial;
+                padding: 0;
+                padding: initial;
+                color: inherit;
+                font-size: inherit;
+                text-decoration: none
+            }
+
+            notify-gp notify-i {
+                display: none;
+                margin: 0 10px 0 0;
+                width: 24px;
+                height: 24px;
+                background-position: 50%;
+                background-repeat: no-repeat
+            }
+
+            notify-gp notify-action,
+            notify-gp notify-cancel {
+                display: none;
+                margin: 0 0 0 24px;
+                max-width: 80px;
+                min-width: 56px;
+                color: #8ab4f8;
+                font-weight: 500;
+                font-size: inherit;
+                text-transform: uppercase;
+                text-align: right;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                cursor: pointer
+            }
+
+            notify-gp notify-cancel {
+                margin: 0
+            }
+
+            notify-gp notify-a {
+                display: block;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                cursor: pointer
+            }
+
+            notify-gp notify-a notify-span {
+                display: block;
+                width: 16px;
+                height: 16px;
+                background-image: url()
+            }
+
+            notify-gp notify-i.holdon {
+                display: block;
+                margin: 0 0 0 24px;
+                width: 20px;
+                height: 20px;
+                background-image: url();
+                cursor: pointer
+            }
+
+            notify-gp .notify-show {
+                opacity: 1;
+                -webkit-transform: scaleY(1);
+                transform: scaleY(1)
+            }
+
+            notify-gp .notify-hide {
+                opacity: 0;
+                -webkit-transform: scaleY(0);
+                transform: scaleY(0)
+            }
+
+            notify-gp .notify-success {
+                color: rgba(118, 255, 3, .8)
+            }
+
+            notify-gp .notify-warning {
+                color: #ffee58
+            }
+
+            notify-gp .notify-error {
+                color: #ef5350
+            }
+
+            notify-gp .notify-modal {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-flow: column nowrap;
+                flex-flow: column;
+                -webkit-box-align: start;
+                -ms-flex-align: start;
+                align-items: flex-start;
+                height: auto;
+                max-height: 200px;
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2)
+            }
+
+            notify-gp .notify-modal .notify-modal-content {
+                margin-top: 5px;
+                font-size: 13px;
+                white-space: normal
+            }
+
+            notify-gp .notify-modal .notify-modal-content a {
+                margin: 0;
+                padding: 0;
+                color: inherit;
+                font-size: inherit;
+                text-decoration: underline;
+                cursor: pointer
+            }
+
+            notify-gp .notify-modal .notify-modal-content a:active,
+            notify-gp .notify-modal .notify-modal-content a:focus,
+            notify-gp .notify-modal .notify-modal-content a:hover,
+            notify-gp .notify-modal .notify-modal-content a:visited {
+                color: inherit
+            }
+
+            notify-gp .notify-snackbar {
+                position: fixed;
+                bottom: 0;
+                left: 50%;
+                margin-bottom: 5px;
+                -webkit-transform-origin: left bottom 0;
+                transform-origin: left bottom 0
+            }
+
+            .notify-position-lt-corner {
+                -webkit-box-align: start;
+                -ms-flex-align: start;
+                align-items: flex-start;
+                margin: 0 0 0 15px;
+                left: 0;
+                right: auto
+            }
+
+            .notify-position-lb-corner {
+                margin: 0 0 15px 15px;
+                right: auto;
+                left: 0
+            }
+
+            .notify-position-lb-corner,
+            .notify-position-rb-corner {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: reverse;
+                -ms-flex-flow: column-reverse wrap-reverse;
+                flex-flow: column-reverse wrap-reverse;
+                top: auto;
+                bottom: 0
+            }
+
+            .notify-position-rb-corner {
+                -webkit-box-align: start;
+                -ms-flex-align: start;
+                align-items: flex-start;
+                margin: 0 15px 15px 0;
+                left: auto;
+                right: 0
+            }
